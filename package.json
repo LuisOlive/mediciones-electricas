@@ -1,0 +1,21 @@
+{
+  "name": "mediciones-electricas",
+  "version": "1.0.0",
+  "description": "Programa para cálculos básicos para mediciones eléctricas",
+  "main": "incertidumbres.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "ts-node src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisOlive/mediciones-electricas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisOlive/mediciones-electricas/issues"
+  },
+  "homepage": "https://github.com/LuisOlive/mediciones-electricas#readme"
+}
