@@ -1,7 +1,7 @@
-import type { Mediciones, Mensurando } from './tipos'
+import type { Mediciones, Mensurando } from '../tipos'
 
-import parcial from './parcial'
-import mejoresValores from './mejoresValores'
+import parcial from '../parcial'
+import mejoresValores from '../mejoresValores'
 
 const p = console.log
 const { sqrt: raiz, floor: truncar } = Math

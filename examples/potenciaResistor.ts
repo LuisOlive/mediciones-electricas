@@ -1,9 +1,9 @@
-import type { Mediciones, Valores } from './core/tipos'
+import type { Mediciones, Valores } from '../src/tipos'
 
-import expandida from './core/expandida'
-import { constanteFisica, exactamente, medicionesRepetidas } from './core/fuentesIncertidumbre'
-import CA865 from './aparatos/TermometroCA865'
-import Aparato from './aparatos/Aparato'
+import expandida from '../src/core/expandida'
+import { constanteFisica, exactamente, medicionesRepetidas } from '../src/fuentesIncertidumbre
+import CA865 from '../src/aparatos/TermometroCA865'
+import Aparato from '../src/aparatos/Aparato'
 
 function mensurando({ V, R0, alpha, T, T0 }: Valores) {
   return V ** 2 / (R0 * (1 + alpha * (T - T0)))

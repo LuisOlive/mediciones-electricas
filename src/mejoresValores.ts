@@ -1,4 +1,4 @@
-import type { Mediciones, Valores } from './tipos'
+import type { Mediciones, Valores } from '@/tipos'
 
 export default function mejoresValores(mediciones: Mediciones) {
   const ans: Valores = {}

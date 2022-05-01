@@ -2,10 +2,12 @@
   "name": "mediciones-electricas",
   "version": "1.0.0",
   "description": "Programa para cálculos básicos para mediciones eléctricas",
-  "main": "incertidumbres.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/main.ts"
+    "start": "ts-node src/main.ts",
+    "build": "rimraf dist & npx rollup -c",
+    "clean": "rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/LuisOlive/mediciones-electricas/issues"
   },
-  "homepage": "https://github.com/LuisOlive/mediciones-electricas#readme"
+  "homepage": "https://github.com/LuisOlive/mediciones-electricas#readme",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-typescript": "^8.3.2",
+    "rollup": "^2.71.1",
+    "typescript": "^4.6.4"
+  }
 }

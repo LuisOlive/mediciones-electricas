@@ -1,14 +1,10 @@
-import { porcentajeDe, incertidumbreB } from '../core/estadistica'
-import type { IAparato } from '../core/tipos'
+import type { Aparato } from '@/aparato'
+import { porcentajeDe } from '@/estadistica'
 
-export default class Triplett60NA implements IAparato {
-  constructor(readonly escalaCompleta: number) {}
+export default class Triplett60NA implements Aparato {
+  constructor(readonly escalaCompleta: number, public lecturas: number[] = []) {}
 
-  exactitud() {
+  __exactitud() {
     return porcentajeDe(this.escalaCompleta, 1.5)
-  }
-
-  tipoB() {
-    return incertidumbreB(this.exactitud())
   }
 }

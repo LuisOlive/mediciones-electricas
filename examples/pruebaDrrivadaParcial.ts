@@ -1,4 +1,4 @@
-import parcial from '../core/parcial'
+import parcial from '../../src/core/parcialcial'
 
 type X = { [key: string]: number }
 

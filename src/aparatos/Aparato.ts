@@ -1,15 +1,19 @@
-import { IAparato } from '../core/tipos'
+import type { Aparato as IAparato } from '@/tipos'
 
-import { porcentajeDe } from '../core/estadistica'
+import { porcentajeDe, media } from '@/estadistica'
 
+/** @deprecated */
 export default class Aparato implements IAparato {
-  constructor(readonly resolucion: number, readonly a: number, readonly b: number) {}
+  /**
+   *
+   * @param resolucion
+   * @param a
+   * @param b
+   * @param lecturas
+   */
+  constructor(readonly resolucion: number, readonly a: number, readonly b: number, public lecturas: number[]) {}
 
-  exactitud(lectura: number) {
-    return porcentajeDe(lectura, this.a) + this.b * this.resolucion
-  }
-
-  tipoB(lectura: number) {
-    return this.exactitud(lectura) / Math.sqrt(3)
+  __exactitud() {
+    return porcentajeDe(media(this.lecturas), this.a) + this.b * this.resolucion
   }
 }

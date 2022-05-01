@@ -1,7 +1,9 @@
 const { sqrt } = Math
 
+/** @deprecated */
 export const RAIZ_3 = sqrt(3)
 
+/** @deprecated */
 export function incertidumbreB(a: number) {
   return a / RAIZ_3
 }

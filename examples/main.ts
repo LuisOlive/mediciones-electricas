@@ -1,10 +1,10 @@
-import type { Mediciones, Valores } from './core/tipos'
+import type { Mediciones, Valores } from '../../src/core/tipostipos'
 
-import expandida from './core/expandida'
-import { constanteFisica, exactamente, medicionesRepetidas } from './core/fuentesIncertidumbre'
-import CA865 from './aparatos/TermometroCA865'
-import BK_Presition from './aparatos/Aparato'
-import Triplett from './aparatos/Tripplett60NA'
+import expandida from '../../src/core/expandidandida'
+import { constanteFisica, exactamente, medicionesRepetidas } from '../../src/core/fuentesIncertidumbreumbre'
+import CA865 from '../../src/aparatos/TermometroCA865CA865'
+import BK_Presition from '../../src/aparatos/Aparatoarato'
+import Triplett from '../../src/aparatos/Tripplett60NAt60NA'
 
 function mensurando({ VM1, VM2, R1 }: Valores) {
   return R1 * (VM1 / VM2 - 1)
