@@ -2,12 +2,13 @@
   "name": "mediciones-electricas",
   "version": "1.0.0",
   "description": "Programa para cálculos básicos para mediciones eléctricas",
-  "main": "dist/index.js",
+  "main": "dist",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/main.ts",
-    "build": "rimraf dist & npx rollup -c",
-    "clean": "rimraf dist"
+    "start": "node src/main.js",
+    "build": "npx rimraf dist & npx rollup -c",
+    "build:only": "npx rollup -c",
+    "clean": "npx rimraf dist"
   },
   "repository": {
     "type": "git",
@@ -23,7 +24,9 @@
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.9",
     "@rollup/plugin-typescript": "^8.3.2",
+    "rimraf": "^3.0.2",
     "rollup": "^2.71.1",
     "typescript": "^4.6.4"
-  }
+  },
+  "types": "dist/index.d.ts"
 }

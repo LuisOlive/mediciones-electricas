@@ -1,13 +1,3 @@
-const { sqrt } = Math
-
-/** @deprecated */
-export const RAIZ_3 = sqrt(3)
-
-/** @deprecated */
-export function incertidumbreB(a: number) {
-  return a / RAIZ_3
-}
-
 export function rangoError(num: number, error: number) {
   return [porcentajeDe(num, 100 - error), porcentajeDe(num, 100 + error)]
 }
@@ -17,7 +7,7 @@ export function porcentajeDe(total: number, porcentaje: number) {
 }
 
 export function incertidumbreDesvEst(nums: number[]) {
-  return 1 / sqrt(2 * gradosLibertad(nums))
+  return 1 / Math.sqrt(2 * gradosLibertad(nums))
 }
 
 export function gradosLibertad(nums: number[]) {
@@ -28,7 +18,7 @@ export function incertidumbreA(nums: number[]) {
   const n = nums.length
   const t = n > 9 ? 1 : [0, 0, 7, 2.3, 1.7, 1.4, 1.3, 1.3, 1.2, 1.2][n]
 
-  return t * sqrt(varianza(nums) / n)
+  return t * Math.sqrt(varianza(nums) / n)
 }
 
 export function varianza(nums: number[]) {
@@ -44,7 +34,7 @@ export function varianza(nums: number[]) {
 }
 
 export function desviacionEstandar(nums: number[]) {
-  return sqrt(varianza(nums))
+  return Math.sqrt(varianza(nums))
 }
 
 export function suma(nums: number[]) {
