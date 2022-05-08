@@ -1,0 +1,7 @@
+node_modules
+.vscode
+examples
+.gitignore
+2022-04-01 15_32_05.jpg
+2022-04-01 15_32_38.jpg
+rollup.config.js
